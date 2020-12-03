@@ -1,6 +1,8 @@
 package com.example.bekasshop.Adapter;
 
 
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +13,7 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.bekasshop.Activity.OrderActivity;
 import com.example.bekasshop.Model.Product;
 import com.example.bekasshop.R;
 import com.squareup.picasso.Picasso;
@@ -87,7 +90,7 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> im
         };
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder{
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         private TextView tv_name,tv_version;
         ImageView imageView;
 
@@ -97,7 +100,24 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> im
             tv_name = (TextView)view.findViewById(R.id.tv_name);
             tv_version = (TextView)view.findViewById(R.id.tv_version);
             imageView = itemView.findViewById(R.id.img_sampul);
+            itemView.setOnClickListener(this);
+        }
 
+        @Override
+        public void onClick(View view) {
+            int position = getAdapterPosition();
+            Product result = mFilteredList.get(position);
+
+            Context context = view.getContext();
+            Intent intent = new Intent(context, OrderActivity.class);
+
+            intent.putExtra("itemId", mFilteredList.get(position).getId());
+            intent.putExtra("itemName", mFilteredList.get(position).getName());
+            intent.putExtra("itemImage", mFilteredList.get(position).getImage());
+            intent.putExtra("itemDesc", mFilteredList.get(position).getDescription());
+            intent.putExtra("itemPrice", mFilteredList.get(position).getPrice());
+
+            context.startActivity(intent);
         }
     }
 
