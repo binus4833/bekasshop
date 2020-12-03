@@ -76,30 +76,35 @@ public class HomeActivity extends AppCompatActivity {
 
     public void furniture(){
         Intent intent = new Intent(this, CategoryActivity.class);
+        intent.putExtra("itemCategory", "furniture");
         startActivity(intent);
 
     }
 
     public void fashion(){
         Intent intent = new Intent(this, CategoryActivity.class);
+        intent.putExtra("itemCategory", "fashion");
         startActivity(intent);
 
     }
 
     public void electronic(){
         Intent intent = new Intent(this, CategoryActivity.class);
+        intent.putExtra("itemCategory", "electronic");
         startActivity(intent);
 
     }
 
     public void automotive(){
         Intent intent = new Intent(this, CategoryActivity.class);
+        intent.putExtra("itemCategory", "automotive");
         startActivity(intent);
 
     }
 
     public void toys(){
         Intent intent = new Intent(this, CategoryActivity.class);
+        intent.putExtra("itemCategory", "toys");
         startActivity(intent);
 
     }
