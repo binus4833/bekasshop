@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/holo_blue_light">
+    android:background="@color/purple_200">
 
     <Button
         android:id="@+id/btnOrder"
@@ -12,6 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="Order More"
+        app:backgroundTint="@color/bg_login"
         app:layout_constraintEnd_toEndOf="@+id/editTextQuantity"
         app:layout_constraintStart_toStartOf="@+id/editTextQuantity"
         app:layout_constraintTop_toBottomOf="@+id/editTextQuantity" />
@@ -25,6 +26,7 @@
         android:gravity="center"
         android:hint="0"
         android:inputType="number"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="@+id/textQuan"
         app:layout_constraintStart_toStartOf="@+id/textQuan"
         app:layout_constraintTop_toBottomOf="@+id/textQuan" />
@@ -37,7 +39,8 @@
 
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/cart" />
+        app:srcCompat="@drawable/cart"
+        tools:ignore="VectorDrawableCompat" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -69,7 +72,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="152dp"
+        android:layout_marginLeft="152dp"
+        android:layout_marginTop="40dp"
         android:text="Order"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="@android:color/white"
@@ -82,7 +87,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="Quantity: "
+        android:text="Quantity "
 
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="@android:color/white"
@@ -107,24 +112,27 @@
 
     <Button
         android:id="@+id/minBtn"
-        android:onClick="minus"
         android:layout_width="40dp"
         android:layout_height="40dp"
-
         android:background="@drawable/round"
+
+        android:onClick="minus"
         android:text="-"
+        app:backgroundTint="@color/bg_login"
+
         app:layout_constraintBottom_toBottomOf="@+id/editTextQuantity"
         app:layout_constraintEnd_toStartOf="@+id/editTextQuantity"
         app:layout_constraintTop_toTopOf="@+id/editTextQuantity" />
 
     <Button
         android:id="@+id/plusBtn"
-        android:onClick="plus"
         android:layout_width="40dp"
         android:layout_height="40dp"
-
         android:background="@drawable/round"
+
+        android:onClick="plus"
         android:text="+"
+        app:backgroundTint="@color/bg_login"
         app:layout_constraintBottom_toBottomOf="@+id/editTextQuantity"
         app:layout_constraintStart_toEndOf="@+id/editTextQuantity"
         app:layout_constraintTop_toTopOf="@+id/editTextQuantity" />
