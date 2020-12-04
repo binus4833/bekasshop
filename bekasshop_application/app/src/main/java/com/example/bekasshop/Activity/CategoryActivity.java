@@ -52,8 +52,7 @@ public class CategoryActivity extends AppCompatActivity {
     private void initViews(){
         mRecyclerView = (RecyclerView)findViewById(R.id.card_recycler_view);
         mRecyclerView.setHasFixedSize(true);
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
-        mRecyclerView.setLayoutManager(layoutManager);
+        mRecyclerView.setLayoutManager(new GridLayoutManager(this,2));
     }
     private void loadJSON(String tempCategory){
         Retrofit retrofit = new Retrofit.Builder()
