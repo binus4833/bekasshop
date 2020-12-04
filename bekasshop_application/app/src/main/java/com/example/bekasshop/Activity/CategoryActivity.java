@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.MenuItemCompat;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -53,6 +54,7 @@ public class CategoryActivity extends AppCompatActivity {
         mRecyclerView = (RecyclerView)findViewById(R.id.card_recycler_view);
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setLayoutManager(new GridLayoutManager(this,2));
+
     }
     private void loadJSON(String tempCategory){
         Retrofit retrofit = new Retrofit.Builder()

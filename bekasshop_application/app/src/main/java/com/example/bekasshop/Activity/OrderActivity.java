@@ -13,8 +13,22 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.bekasshop.Adapter.DataAdapter;
+import com.example.bekasshop.Model.JSONResponse;
 import com.example.bekasshop.R;
+import com.example.bekasshop.Retrofit.LoginInterface;
+import com.example.bekasshop.Retrofit.RequestInterface;
 import com.squareup.picasso.Picasso;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+import retrofit2.converter.scalars.ScalarsConverterFactory;
 
 
 public class OrderActivity extends AppCompatActivity {
@@ -24,7 +38,6 @@ public class OrderActivity extends AppCompatActivity {
     EditText itemQty;
     Button orderBtn;
     int resId, jmlQty;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +65,14 @@ public class OrderActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Empty field and 0 not allowed!", Toast.LENGTH_SHORT).show();
                 }
                 else {
+                    Intent intent = new Intent(OrderActivity.this, OrderDetailActivity.class);
+                    intent.putExtra("OrderItemId", intent.getExtras().getString("itemId"));
+                    intent.putExtra("OrderItemName", intent.getExtras().getString("itemName"));
+                    intent.putExtra ("OrderItemImage", intent.getExtras().getString("itemImage"));
+                    intent.putExtra("OrderItemDesc", intent.getExtras().getString("itemDesc"));
+                    intent.putExtra("OrderItemPrice", intent.getExtras().getString("itemPrice"));
+                    intent.putExtra("OrderItemQty", Integer.parseInt(itemQty.getText().toString()));
+                    startActivity(intent);
 
                 }
             }
@@ -82,4 +103,6 @@ public class OrderActivity extends AppCompatActivity {
         itemQty = findViewById(R.id.editTextQuantity);
         itemQty.setText("" + jumlah);
     }
+
+
 }

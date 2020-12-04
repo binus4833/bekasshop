@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/bg_register"
     tools:context=".Activity.MainActivity">
 
 
@@ -34,24 +35,16 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <LinearLayout
-        android:layout_width="68dp"
-        android:layout_height="60dp"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
         android:layout_marginStart="4dp"
         android:layout_marginLeft="4dp"
-        android:orientation="horizontal"
         android:background="@color/input_register_bg"
         android:gravity="center"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/toolbar"
         app:layout_constraintTop_toTopOf="parent">
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="50dp"
-            android:layout_height="46dp"
-            android:src="@drawable/cart"
-            tools:layout_editor_absoluteX="213dp"
-            tools:layout_editor_absoluteY="85dp" />
 
     </LinearLayout>
 

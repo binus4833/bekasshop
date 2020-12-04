@@ -29,13 +29,6 @@
             android:textSize="30dp"
             android:textStyle="bold" />
 
-        <ImageView
-            android:id="@+id/cartbtn"
-            android:layout_width="50dp"
-            android:layout_height="46dp"
-            android:layout_gravity="center"
-            android:background="@drawable/cart" />
-
     </LinearLayout>
 
     <LinearLayout

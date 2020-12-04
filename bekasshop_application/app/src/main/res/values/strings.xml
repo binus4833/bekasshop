@@ -10,4 +10,6 @@
     <string name="c_password_error">Please enter a confirm password</string>
     <string name="error_c_invalid_password">Please enter a minimum confirm password of 6 characters</string>
     <string name="error_c_not_same_password">Confirm password not same as password</string>
+
+    <string name="get_current_location">Get Current Location</string>
 </resources>

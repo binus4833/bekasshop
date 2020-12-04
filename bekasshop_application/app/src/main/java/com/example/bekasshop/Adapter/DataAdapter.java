@@ -113,7 +113,7 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> im
 
             intent.putExtra("itemId", mFilteredList.get(position).getId());
             intent.putExtra("itemName", mFilteredList.get(position).getName());
-            intent.putExtra("itemImage", mFilteredList.get(position).getImage());
+            intent.putExtra ("itemImage", mFilteredList.get(position).getImage());
             intent.putExtra("itemDesc", mFilteredList.get(position).getDescription());
             intent.putExtra("itemPrice", mFilteredList.get(position).getPrice());
 

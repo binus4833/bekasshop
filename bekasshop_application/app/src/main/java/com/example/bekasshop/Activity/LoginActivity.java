@@ -31,6 +31,7 @@ public class LoginActivity extends Activity {
     private TextView tvreg;
     private PreferenceHelper preferenceHelper;
     boolean isNameValid, isEmailValid, isPasswordValid, isCPasswordValid;
+    public static String user_name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
