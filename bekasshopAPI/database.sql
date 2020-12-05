@@ -1,6 +1,14 @@
 CREATE TABLE `bekasshopdb`.`users` ( `id` INT NOT NULL AUTO_INCREMENT , `emails` 
 VARCHAR(100) NOT NULL , `username` VARCHAR(100) NOT NULL , `password` VARCHAR(100) 
-NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;                      
+
+CREATE TABLE bekasshopdb.products ( id INT NOT NULL AUTO_INCREMENT , name 
+VARCHAR(30) NOT NULL , description VARCHAR(255) NOT NULL , image VARCHAR(50)
+NOT NULL , 'price' INT(11) NOT NULL , 'category' VARCHAR(100) NOT NULL , PRIMARY KEY (id)) ENGINE = InnoDB;
+
+INSERT INTO users (id, emails, username, password) VALUES
+(NULL, 'dadu@gmail.com', 'Dadu', 'tonyhawk123'), 
+(NULL, 'rudy@gmail.com', 'rudy111', 'rudy123')
 
 INSERT INTO `products` (`id`, `name`, `description`, `image`, `price`, `category`) VALUES 
 (NULL, 'Yoyo', 'Yoyo Bekas pakai oleh juara 1', 'Yoyo_Bekas.jpg', '100000', 'toys'),
