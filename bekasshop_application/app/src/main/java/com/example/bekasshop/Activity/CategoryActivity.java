@@ -5,7 +5,6 @@ import androidx.appcompat.widget.SearchView;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.MenuItemCompat;
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
@@ -66,7 +65,6 @@ public class CategoryActivity extends AppCompatActivity {
         call.enqueue(new Callback<JSONResponse>() {
             @Override
             public void onResponse(Call<JSONResponse> call, Response<JSONResponse> response) {
-
                 JSONResponse jsonResponse = response.body();
                 mArrayList = new ArrayList<>(Arrays.asList(jsonResponse.getProducts()));
                 mAdapter = new DataAdapter(mArrayList);

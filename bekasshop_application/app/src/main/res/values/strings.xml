@@ -12,4 +12,6 @@
     <string name="error_c_not_same_password">Confirm password not same as password</string>
 
     <string name="get_current_location">Get Current Location</string>
+
+    <string name="map_key">AIzaSyB2JHuqOu55SQG7PAUYqs9REkDmcDMSS6k</string>
 </resources>

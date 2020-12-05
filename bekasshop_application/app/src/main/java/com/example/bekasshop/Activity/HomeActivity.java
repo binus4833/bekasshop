@@ -15,7 +15,6 @@ public class HomeActivity extends AppCompatActivity {
 
     ViewFlipper ImageC;
     LinearLayout btn;
-    ImageView cartbtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,49 +63,41 @@ public class HomeActivity extends AppCompatActivity {
     public void imageflip(int image){
         ImageView imageView = new ImageView(this);
         imageView.setBackgroundResource(image);
-
         ImageC.addView(imageView);
-
     }
     public void all(){
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
-
     }
 
     public void furniture(){
         Intent intent = new Intent(this, CategoryActivity.class);
         intent.putExtra("itemCategory", "furniture");
         startActivity(intent);
-
     }
 
     public void fashion(){
         Intent intent = new Intent(this, CategoryActivity.class);
         intent.putExtra("itemCategory", "fashion");
         startActivity(intent);
-
     }
 
     public void electronic(){
         Intent intent = new Intent(this, CategoryActivity.class);
         intent.putExtra("itemCategory", "electronic");
         startActivity(intent);
-
     }
 
     public void automotive(){
         Intent intent = new Intent(this, CategoryActivity.class);
         intent.putExtra("itemCategory", "automotive");
         startActivity(intent);
-
     }
 
     public void toys(){
         Intent intent = new Intent(this, CategoryActivity.class);
         intent.putExtra("itemCategory", "toys");
         startActivity(intent);
-
     }
 
 }

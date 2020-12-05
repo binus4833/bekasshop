@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.OrderDetailActivity"
+    tools:context=".Activity.PaymentActivity"
     android:background="@color/bg_register">
 
     <TextView
@@ -58,12 +58,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:gravity="center"
-        android:textColor="@color/bg_register"
+        android:textColor="@color/white"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/buttonGetCurrentLocation"
-        app:layout_constraintStart_toStartOf="@+id/buttonGetCurrentLocation"
-        app:layout_constraintTop_toBottomOf="@+id/buttonGetCurrentLocation" />
+        app:layout_constraintEnd_toEndOf="@+id/bt_location"
+        app:layout_constraintStart_toStartOf="@+id/bt_location"
+        app:layout_constraintTop_toBottomOf="@+id/bt_location" />
 
     <ProgressBar
         android:id="@+id/progressBar"
@@ -74,11 +74,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonGetCurrentLocation"
+        app:layout_constraintTop_toBottomOf="@+id/bt_location"
         app:layout_constraintVertical_bias="0.432" />
 
     <Button
-        android:id="@+id/buttonGetCurrentLocation"
+        android:id="@+id/bt_location"
         android:layout_width="133dp"
         android:layout_height="51dp"
         android:text="Select Address"
@@ -122,7 +122,7 @@
         app:layout_constraintVertical_bias="0.622" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/OrderPayment"
         android:layout_width="380dp"
         android:layout_height="50dp"
         android:text="Order"
